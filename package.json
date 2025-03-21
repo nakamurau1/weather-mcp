@@ -1,0 +1,37 @@
+{
+  "name": "weather-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for providing weather data from National Weather Service API",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "weather-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nakamurau1/weather-mcp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nakamurau1/weather-mcp/issues"
+  },
+  "homepage": "https://github.com/nakamurau1/weather-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "@types/axios": "^0.14.4",
+    "axios": "^1.6.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "typescript": "^5.8.2"
+  }
+}

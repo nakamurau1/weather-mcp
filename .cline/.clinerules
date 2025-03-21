@@ -1,0 +1,58 @@
+# Weather MCP Server Project Rules
+
+## Code Style & Formatting
+
+- Use TypeScript strict mode for all files
+- Follow 2-space indentation
+- Use single quotes for string literals
+- Always terminate statements with semicolons
+- Use camelCase for variables and functions
+- Use PascalCase for classes and interfaces
+- End interface names with 'Interface' (e.g., `WeatherServiceInterface`)
+- End type names with 'Type' (e.g., `ForecastType`)
+- Use async/await over Promise chains
+
+## Project Structure
+
+- Keep source files in the `src` directory
+- Organize code into logical modules by feature
+- Place interfaces and types in separate files with `.types.ts` suffix
+- Place constants in a dedicated `constants.ts` file
+- Implement services in files with `.service.ts` suffix
+
+## Error Handling
+
+- Use custom error classes extending Error
+- Always provide descriptive error messages
+- Log errors before handling them
+- Return user-friendly error messages in MCP responses
+- Use try/catch blocks around API calls and external services
+
+## API Integration
+
+- Set a descriptive User-Agent in all NWS API requests
+- Implement retry logic for failed API calls
+- Add timeout handling for all HTTP requests
+- Use typed responses for API calls
+
+## MCP Implementation
+
+- Follow MCP protocol specifications exactly
+- Validate all inputs with Zod schemas
+- Format outputs for optimal LLM consumption
+- Provide helpful error messages when tools fail
+- Keep tool implementation code separate from protocol handling code
+
+## Documentation
+
+- Document all public interfaces and functions
+- Include examples in JSDoc comments
+- Keep README updated with setup instructions
+- Document any environment variables or configuration options
+
+## Build Process
+
+- Keep build steps simple and reproducible
+- Ensure the build process works across platforms
+- Make the build output executable as a CLI tool
+- Include proper shebang line for Node.js executables
